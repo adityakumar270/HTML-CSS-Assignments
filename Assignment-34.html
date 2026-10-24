@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Navbar and Hero Section using Flexbox">
+    <title>Assignment 34 - Navbar and Hero</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #222;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 18px 8%;
+            background-color: #17365d;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 35px;
+            padding: 60px 8%;
+            background-color: #eef3f9;
+        }
+
+        .hero-content {
+            flex: 1 1 300px;
+        }
+
+        .hero-content h1 {
+            color: #17365d;
+            font-size: 42px;
+            margin-top: 0;
+        }
+
+        .hero-content p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .hero-content button {
+            padding: 13px 24px;
+            background-color: #17365d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .hero-content button:hover {
+            background-color: #24528a;
+        }
+
+        .hero-image {
+            flex: 1 1 250px;
+            min-height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #d5e3f4;
+            border-radius: 15px;
+            font-size: 100px;
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero-image {
+                width: 100%;
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">My Website</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Welcome to My Website</h1>
+
+                <p>
+                    Explore our website to learn new skills,
+                    discover useful resources, and start your
+                    journey toward success.
+                </p>
+
+                <button type="button"
+                    onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                    Learn More
+                </button>
+            </div>
+
+            <div class="hero-image" aria-label="Laptop illustration">
+                💻
+            </div>
+        </section>
+
+        <section id="about" style="padding: 40px 20px; text-align: center;">
+            <h2>About Us</h2>
+            <p>This website is a responsive Flexbox design demo.</p>
+        </section>
+    </main>
+
+</body>
+</html>
