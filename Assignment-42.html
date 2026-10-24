@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Project - Fixed</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: #263238;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            min-width: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        .content {
+            min-width: 0;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 15px;
+        }
+
+        .product {
+            background: white;
+            padding: 25px 10px;
+            text-align: center;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Fix 1: Tablet layout */
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Fix 2: Mobile layout */
+        @media (max-width: 480px) {
+            header {
+                padding: 12px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .layout {
+                padding: 10px;
+                gap: 12px;
+            }
+
+            .sidebar {
+                padding: 15px;
+            }
+
+            .products {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 10px;
+            }
+
+            .product {
+                padding: 18px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Product Grid</h1>
+        <p>Fixed for Desktop, Tablet and Mobile</p>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <a href="#">Electronics</a>
+            <a href="#">Clothing</a>
+            <a href="#">Books</a>
+        </aside>
+
+        <section class="content">
+            <h2>Our Products</h2>
+
+            <div class="products">
+                <div class="product">💻 Laptop</div>
+                <div class="product">📱 Mobile</div>
+                <div class="product">🎧 Headphones</div>
+                <div class="product">⌚ Smart Watch</div>
+                <div class="product">📷 Camera</div>
+                <div class="product">🎮 Gaming Console</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Assignment 42 - Responsive Issues Fixed</p>
+    </footer>
+
+</body>
+</html>
