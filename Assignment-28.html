@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fixing CSS overflow issues">
+    <title>Assignment 28 - Fix Overflow</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #17365d;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .card {
+            width: 100%;
+            padding: 20px;
+            background-color: #e6f2ff;
+            border: 2px solid #17365d;
+            border-radius: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .long-text {
+            overflow-wrap: anywhere;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            .card {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fixing CSS Overflow</h1>
+
+    <div class="container">
+        <h2>Responsive Content Card</h2>
+
+        <div class="card">
+            <h3>Overflow Fixed</h3>
+
+            <p>
+                This card fits inside its container and does not
+                overflow the page on smaller screens.
+            </p>
+
+            <p class="long-text">
+                ThisIsAVeryLongWordThatCouldBreakTheLayoutIfOverflowIsNotHandledProperly123456789
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
