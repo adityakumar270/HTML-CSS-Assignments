@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreativeSpace - Landing Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #263238;
+            background: #f5f7fb;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Navigation - Flexbox */
+        nav {
+            background: white;
+            padding: 20px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #5b4bdb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #263238;
+        }
+
+        .nav-links a:hover {
+            color: #5b4bdb;
+        }
+
+        /* Hero section - Flexbox */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 85px 20px;
+            background: #e9e7ff;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .primary {
+            background: #5b4bdb;
+            color: white;
+        }
+
+        .secondary {
+            background: white;
+            color: #5b4bdb;
+        }
+
+        /* Features - CSS Grid */
+        .features {
+            padding: 60px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 32px;
+            margin: 0 0 35px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 22px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000010;
+            overflow-wrap: anywhere;
+        }
+
+        .emoji {
+            font-size: 40px;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        /* Contact section */
+        .contact {
+            text-align: center;
+            padding: 40px 20px;
+            background: #e9e7ff;
+        }
+
+        footer {
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Tablet breakpoint */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .hero {
+                padding: 65px 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        /* Mobile breakpoint */
+        @media (max-width: 480px) {
+            .container {
+                width: 92%;
+            }
+
+            nav {
+                padding: 16px 0;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .hero {
+                padding: 48px 16px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .features {
+                padding: 40px 0;
+            }
+
+            .features h2 {
+                font-size: 27px;
+            }
+
+            .feature-grid {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 16px;
+            }
+
+            .card {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">CreativeSpace</div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Build Something Amazing</h1>
+            <p>
+                Discover creative ideas and simple tools to help you
+                learn, grow, and bring your next big idea to life.
+            </p>
+
+            <div class="buttons">
+                <a href="#features" class="btn primary">Get Started</a>
+                <a href="#contact" class="btn secondary">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="features container" id="features">
+            <h2>Our Features</h2>
+
+            <div class="feature-grid">
+                <article class="card">
+                    <div class="emoji">🎨</div>
+                    <h3>Creative Design</h3>
+                    <p>Create clean and attractive designs for your ideas.</p>
+                </article>
+
+                <article class="card">
+                    <div class="emoji">⚡</div>
+                    <h3>Fast Performance</h3>
+                    <p>Enjoy a smooth and simple user experience.</p>
+                </article>
+
+                <article class="card">
+                    <div class="emoji">📱</div>
+                    <h3>Responsive Layout</h3>
+                    <p>Use the website comfortably on different screen sizes.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Ready to Get Started?</h2>
+            <p>Bring your next idea to life with CreativeSpace.</p>
+            <a href="#home" class="btn primary">Back to Top</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 CreativeSpace | HTML and CSS Project</p>
+    </footer>
+
+</body>
+</html>
