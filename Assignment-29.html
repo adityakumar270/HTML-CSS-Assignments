@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing page hero section using position and z-index">
+    <title>Assignment 29 - Hero Section</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 450px;
+            padding: 80px 30px;
+            background: linear-gradient(135deg, #17365d, #3269a8);
+            color: white;
+            overflow: hidden;
+        }
+
+        .circle {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #d5a84f;
+            opacity: 0.8;
+            top: -70px;
+            right: -50px;
+            z-index: 1;
+        }
+
+        .circle2 {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #7fa9d8;
+            bottom: -60px;
+            right: 180px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 650px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .hero button {
+            margin-top: 15px;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 6px;
+            background-color: #d5a84f;
+            color: #17365d;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #f0c96c;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero">
+
+        <div class="circle"></div>
+        <div class="circle2"></div>
+
+        <div class="hero-content">
+            <h1>Build Your Future with Technology</h1>
+
+            <p>
+                Learn coding, improve your skills, and create
+                amazing projects with HTML and CSS.
+            </p>
+
+            <button>Get Started</button>
+        </div>
+
+    </section>
+
+</body>
+</html>
