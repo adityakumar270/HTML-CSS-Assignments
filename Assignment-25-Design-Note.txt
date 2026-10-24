@@ -1,0 +1,7 @@
+Assignment 25 - Design Choices
+
+I used navy blue for the header and navigation links to create a professional look. Gold accents highlight important sections. A light grey background and white content areas keep the pages clean and readable.
+
+I used Arial as the main font because it is simple and easy to read. All four pages use the same colours, navigation links and styling to provide a consistent user experience.
+
+I also used proper spacing, rounded corners and clear headings to improve readability. The registration and contact forms make the website more interactive in appearance.

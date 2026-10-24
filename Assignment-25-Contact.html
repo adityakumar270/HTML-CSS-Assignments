@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact page - Student website">
+    <title>Contact - My Website</title>
+
+    <style>
+        :root {
+            --primary: #17365d;
+            --accent: #d5a84f;
+            --background: #eef2f7;
+            --surface: #ffffff;
+            --text: #263238;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background: var(--surface);
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 25px;
+            background: var(--surface);
+            border-top: 4px solid var(--accent);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: var(--primary);
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        button {
+            margin-top: 18px;
+            padding: 12px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #254d7c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you</p>
+    </header>
+
+    <nav>
+        <a href="Assignment-25-Home.html">Home</a>
+        <a href="Assignment-25-About.html">About</a>
+        <a href="Assignment-25-Registration.html">Registration</a>
+        <a href="Assignment-25-Contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Get in Touch</h2>
+
+        <p>If you have any questions, you can use the form below.</p>
+
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name"
+                   placeholder="Enter your name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject"
+                   placeholder="Enter the subject" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5"
+                      placeholder="Write your message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Assignment 25 | HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
