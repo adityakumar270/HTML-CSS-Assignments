@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Project</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #263238;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-areas:
+                "sidebar content";
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            color: #1565c0;
+            text-decoration: none;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 25px 10px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #263238;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Breakpoint 1: Tablet */
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "sidebar"
+                    "content";
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Breakpoint 2: Mobile */
+        @media (max-width: 480px) {
+            header {
+                padding: 14px 8px;
+                font-size: 14px;
+            }
+
+            .layout {
+                padding: 10px;
+                gap: 10px;
+            }
+
+            .sidebar {
+                padding: 12px;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            .product {
+                padding: 20px 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Responsive Grid Project</h1>
+        <p>Desktop, Tablet and Mobile Layout</p>
+    </header>
+
+    <main class="layout">
+
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <a href="#">Electronics</a>
+            <a href="#">Clothing</a>
+            <a href="#">Books</a>
+        </aside>
+
+        <section class="content">
+            <h2>Our Products</h2>
+
+            <div class="products">
+                <div class="product">💻 Laptop</div>
+                <div class="product">📱 Mobile</div>
+                <div class="product">🎧 Headphones</div>
+                <div class="product">⌚ Smart Watch</div>
+                <div class="product">📷 Camera</div>
+                <div class="product">🎮 Gaming</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Responsive Design Assignment 41</p>
+    </footer>
+
+</body>
+</html>
