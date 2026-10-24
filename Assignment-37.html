@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive product grid using CSS Grid">
+    <title>Assignment 37 - Responsive Product Grid</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f4f8;
+            color: #263238;
+        }
+
+        header {
+            background-color: #17365d;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(220px, 1fr)
+            );
+            gap: 22px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 170px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e3ebf5;
+            font-size: 65px;
+        }
+
+        .product-info {
+            padding: 18px;
+        }
+
+        .product-info h2 {
+            color: #17365d;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .product-info p {
+            color: #606b78;
+            line-height: 1.5;
+        }
+
+        .price {
+            color: #16803c !important;
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .product-info button {
+            width: 100%;
+            padding: 11px;
+            border: none;
+            border-radius: 5px;
+            background-color: #17365d;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .product-info button:hover {
+            background-color: #24528a;
+        }
+
+        footer {
+            background-color: #17365d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Product Store</h1>
+        <p>Discover our latest products</p>
+    </header>
+
+    <main class="products">
+
+        <article class="product-card">
+            <div class="product-image">🎧</div>
+            <div class="product-info">
+                <h2>Headphones</h2>
+                <p>Enjoy clear and high-quality sound.</p>
+                <p class="price">₹999</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">⌚</div>
+            <div class="product-info">
+                <h2>Smart Watch</h2>
+                <p>Track your activity every day.</p>
+                <p class="price">₹1,499</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">🎒</div>
+            <div class="product-info">
+                <h2>Backpack</h2>
+                <p>A practical bag for everyday use.</p>
+                <p class="price">₹799</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">⌨️</div>
+            <div class="product-info">
+                <h2>Keyboard</h2>
+                <p>Enjoy comfortable typing at your desk.</p>
+                <p class="price">₹1,199</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">🖱️</div>
+            <div class="product-info">
+                <h2>Wireless Mouse</h2>
+                <p>Simple and smooth computer control.</p>
+                <p class="price">₹499</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <div class="product-image">🔊</div>
+            <div class="product-info">
+                <h2>Bluetooth Speaker</h2>
+                <p>Listen to your favourite music.</p>
+                <p class="price">₹899</p>
+                <button type="button">View Product</button>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Assignment 37 - Responsive CSS Grid</p>
+    </footer>
+
+</body>
+</html>
